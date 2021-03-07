@@ -20,7 +20,7 @@
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 60%;
   position: relative;
   transition: all 5s ease-in-out;
   z-index: 500;
@@ -29,7 +29,8 @@
 .popup h2 {
   margin-top: 0;
   color: #333;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Cabin Sketch', sans-serif;
+  font-size: 4rem;
 }
 .popup .close {
   position: absolute;
@@ -45,8 +46,9 @@
   color: #ff48fa;
 }
 .popup .content {
-  max-height: 30%;
+  max-height: 60%;
   overflow: auto;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @media screen and (max-width: 700px){
