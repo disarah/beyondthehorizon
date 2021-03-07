@@ -15,63 +15,65 @@
 
   <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" 
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
-            integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
-            crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="scripts/index.js"></script>
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+  crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="scripts/index.js"></script>
 
   <!-- Material Kit CSS -->
   <link href="assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
 </head>
-  <body class="text-center" style = "background-image:url('assets/img/mailbox_closed.png');background-size:cover; height:100vh">
+<body class="text-center" style = "background-image:url('assets/img/mailbox_closed.png');background-size:cover; height:100vh">
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-      </header>
+  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+    </header>
 
-      <div style = "">
-        <main class = "text-center" role="main" class="inner cover" style = "background-color: rgba(255, 255, 255, 0.9); border-radius: 10px;">
-        <h1 class="cover-heading" style = "color: #e6475a;">Check Mail?</h1>
+    <div style = "">
+      <main class = "text-center" role="main" class="inner cover" style = "background-color: rgba(255, 255, 255, 0.9); border: 1px solid rgba(,0,0,.2);border-radius: 1.1rem;">
+        <h1 class="cover-heading" style = "color:#3a7bd5;">Check Mail?</h1>
         <p class="lead">
-          <a href="login.html" id = "buton" class="gradient-button" style = "background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);">Open Mailbox</a>
+          <a href="login.html" id = "buton" class="gradient-button" style = "background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);">Open Mailbox</a>
         </p>
       </main>
-      </div>
-
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <a href="#"> Github Repo</a> 
-        </br>
-          <p id="copyright">&copy;
-      <script>
-        document.write(new Date().getFullYear())
-      </script>, give me a <\br> and checkout the repo.
-    </p>
-        </div>
-      </footer>
     </div>
-  <script>
-    function updateBackground() {
-      var 
-        hr = (new Date()).getHours(),
-        body = document.body,
-        bstyle = body.style,    
-        hello = document.querySelector(".hello");    
-        if (hr < 6) {
-          bstyle.backgroundColor = "#fffffa";
-        } else if (hr < 12) {
-          bstyle.backgroundColor = "#ffebd9";
-        } else if (hr < 18) {
-          bstyle.backgroundColor = "#ffd5d4";
-        }else {
-          bstyle.backgroundColor = "#faf0ff";
-        } 
-      }
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <a href="https://github.com/disarah/beyondthehorizon" style = "color:#3a7bd5"> Github Repo</a> 
+      </br>
+      <p id="copyright">&copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script>, give me a <\br> and checkout the repo.
+      </p>
+    </div>
+  </footer>
+</div>
+<script>
+  /*
+  function updateBackground() {
+    var 
+    hr = (new Date()).getHours(),
+    body = document.body,
+    bstyle = body.style,    
+    hello = document.querySelector(".hello");    
+    if (hr < 6) {
+      bstyle.backgroundColor = "#fffffa";
+    } else if (hr < 12) {
+      bstyle.backgroundColor = "#ffebd9";
+    } else if (hr < 18) {
+      bstyle.backgroundColor = "#ffd5d4";
+    }else {
+      bstyle.backgroundColor = "#faf0ff";
+    } 
+  }
 
   setInterval(updateBackground, 1000 * 60);
   updateBackground();
-  </script>
+  */
+</script>
 </body>
 
 </html>

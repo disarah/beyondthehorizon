@@ -2,89 +2,91 @@
 <html lang="en">
 
 <head>
-  <title>Login: Beyond the Horizon Line</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <!--     Fonts and icons     -->
-  <link rel = "icon" href = "assets/img/logo.svg">
+ <title>Login: Beyond the Horizon Line</title>
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+ <!--     Fonts and icons     -->
+ <link rel = "icon" href = "assets/img/logo.svg">
 
-  <link rel="stylesheet" type="text/css" href="login.css">
-  <link rel="stylesheet" 
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
-            integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
-            crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="scripts/index.js"></script>
+ <link rel="stylesheet" type="text/css" href="login.css">
+ <link rel="stylesheet" 
+ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+ integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+ crossorigin="anonymous">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="scripts/index.js"></script>
 
-   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-   <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
 
-  <!-- Material Kit CSS -->
-  <link href="assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
+ <!-- Material Kit CSS -->
+ <link href="assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
 </head>
 
-<body>
-    <div class="container">
-        <div class="row">
-			<div class="col-md-5 mx-auto">
-			<div id="first">
-				<div class="myform form ">
-					 <div class="logo mb-3">
-						 <div class="col-md-12 text-center">
-							<h1>Login</h1>
-						 </div>
-					</div>
-                   <form action="" method="post" name="login">
-                           <div class="form-group">
-                              <label for="exampleInputEmail1">Email address</label>
-                              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                           </div>
-                           <div class="form-group">
-                              <label for="exampleInputEmail1">Password</label>
-                              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
-                           </div>
-                           <div class="col-md-12 text-center ">
-                              <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
-                           </div>
-                           <div class="col-md-12 ">
-                              <div class="login-or">
-                                 <hr class="hr-or">
-                                 <span class="span-or">or</span>
-                              </div>
-                           </div>
-                           <div class="form-group">
-                              <p class="text-center">Don't have account? <a href="signup.html" id="signup">Sign up here</a></p>
-                           </div>
-                        </form>
-                 
-				</div>
-			</div>
-		</div>
-      </div>   
-   <script>
-    function updateBackground() {
-      var 
-        hr = (new Date()).getHours(),
-        body = document.body,
-        bstyle = body.style,    
-        hello = document.querySelector(".hello");    
-        if (hr < 6) {
-          bstyle.backgroundColor = "#fffffa";
-        } else if (hr < 12) {
-          bstyle.backgroundColor = "#ffebd9";
-        } else if (hr < 18) {
-          bstyle.backgroundColor = "#ffd5d4";
-        }else {
-          bstyle.backgroundColor = "#faf0ff";
-        } 
-      }
+<body style = "background-image:url('assets/img/mailbox_closed.png');background-size:cover; height:100vh; backdrop-filter:blur(5px)">
+  <div class="container" style = "z-index: 2;">
+    <div class="row">
+      <div class="col-md-5 mx-auto">
+         <div id="first">
+           <div class="myform form ">
+            <div class="logo mb-3">
+              <div class="col-md-12 text-center">
+                 <h1 style = "font-family: 'Cabin Sketch', cursive;">Login</h1>
+              </div>
+           </div>
+           <form action="" method="post" name="login" style = "padding: 20px;font-family: 'Open Sans', sans-serif;">
+            <div class="form-group">
+               <label for="exampleInputEmail1">Email address</label>
+               <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+               <label for="exampleInputEmail1">Password</label>
+               <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+            </div>
+            <div class="col-md-12 text-center ">
+               <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm gradient-button" id = "buton" style = "background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);" >Login</button>
+            </div>
+            <div class="col-md-12 ">
+               <div class="login-or">
+                  <hr class="hr-or">
+                  <span class="span-or">or</span>
+               </div>
+            </div>
+            <div class="form-group">
+               <p class="text-center">Don't have account? <a href="signup.html" id="signup" style = "color:#3a7bd5">Sign up here</a></p>
+            </div>
+         </form>
+
+      </div>
+   </div>
+</div>
+</div>   
+<script>
+  /*
+  function updateBackground() {
+    var 
+    hr = (new Date()).getHours(),
+    body = document.body,
+    bstyle = body.style,    
+    hello = document.querySelector(".hello");    
+    if (hr < 6) {
+      bstyle.backgroundColor = "#fffffa";
+    } else if (hr < 12) {
+      bstyle.backgroundColor = "#ffebd9";
+    } else if (hr < 18) {
+      bstyle.backgroundColor = "#ffd5d4";
+    }else {
+      bstyle.backgroundColor = "#faf0ff";
+    } 
+  }
 
   setInterval(updateBackground, 1000 * 60);
   updateBackground();
-  </script>      
+  */
+</script>      
 </body>

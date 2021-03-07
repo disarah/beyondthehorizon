@@ -12,83 +12,85 @@
 
   <link rel="stylesheet" type="text/css" href="login.css">
   <link rel="stylesheet" 
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
-            integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
-            crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="scripts/index.js"></script>
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+  crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="scripts/index.js"></script>
 
-   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-   <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
 
   <!-- Material Kit CSS -->
   <link href="assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
 </head>
 
-<body>
-    <div class="container">
-        <div class="row">
-			<div class="col-md-5 mx-auto">
-			  <div id="first">
-			      <div class="myform form ">
-                        <div class="logo mb-3">
-                           <div class="col-md-12 text-center">
-                              <h1 >Signup</h1>
-                           </div>
-                        </div>
-                        <form action="#" name="registration">
-                           <div class="form-group">
-                              <label for="exampleInputEmail1">Full Name</label>
-                              <input type="text"  name="fullname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Full Name">
-                           </div>
-                           <div class="form-group">
-                              <label for="exampleInputEmail1">Email Address</label>
-                              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
-                           </div>
-                           <div class="form-group">
-                              <label for="exampleInputEmail1">Username</label>
-                              <input type="text"  name="username" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Username">
-                           </div>
-                           <div class="form-group">
-                              <label for="exampleInputEmail1">Password</label>
-                              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Passwork">
-                           </div>
-                           <div class="col-md-12 text-center mb-3">
-                              <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Sign Up</button>
-                           </div>
-                           <div class="col-md-12 ">
-                              <div class="form-group">
-                                 <p class="text-center">Already have an account? <a href="login.html" id="signin">Log in</a></p>
-                              </div>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-			</div>
-		</div>
-      </div>   
-   <script>
-    function updateBackground() {
-      var 
-        hr = (new Date()).getHours(),
-        body = document.body,
-        bstyle = body.style,    
-        hello = document.querySelector(".hello");    
-        if (hr < 6) {
-          bstyle.backgroundColor = "#fffffa";
-        } else if (hr < 12) {
-          bstyle.backgroundColor = "#ffebd9";
-        } else if (hr < 18) {
-          bstyle.backgroundColor = "#ffd5d4";
-        }else {
-          bstyle.backgroundColor = "#faf0ff";
-        } 
-      }
+<body style = "background-image:url('assets/img/mailbox_closed.png');background-size:cover; height:100vh; backdrop-filter:blur(5px)">
+  <div class="container" style = "z-index: 2;">
+    <div class="row">
+     <div class="col-md-5 mx-auto">
+       <div id="first">
+         <div class="myform form ">
+          <div class="logo mb-3">
+           <div class="col-md-12 text-center">
+            <h1 style = "font-family: 'Cabin Sketch', cursive;">Signup</h1>
+          </div>
+        </div>
+        <form action="#" name="registration" style = "padding: 20px;font-family: 'Open Sans', sans-serif;">
+         <div class="form-group">
+          <label for="exampleInputEmail1">Full Name</label>
+          <input type="text"  name="fullname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email Address</label>
+          <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="text"  name="username" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Password</label>
+          <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Password">
+        </div>
+        <div class="col-md-12 text-center mb-3">
+          <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm gradient-button" id = "buton" href="confirm.html" style = "background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);">Sign Up</button>
+        </div>
+        <div class="col-md-12 ">
+          <div class="form-group">
+           <p class="text-center">Already have an account? <a href="login.html" id="signin" style = "color:#3a7bd5">Log in</a></p>
+         </div>
+       </div>
+     </div>
+   </form>
+ </div>
+</div>
+</div>
+</div>   
+<script>
+  /*
+  function updateBackground() {
+    var 
+    hr = (new Date()).getHours(),
+    body = document.body,
+    bstyle = body.style,    
+    hello = document.querySelector(".hello");    
+    if (hr < 6) {
+      bstyle.backgroundColor = "#fffffa";
+    } else if (hr < 12) {
+      bstyle.backgroundColor = "#ffebd9";
+    } else if (hr < 18) {
+      bstyle.backgroundColor = "#ffd5d4";
+    }else {
+      bstyle.backgroundColor = "#faf0ff";
+    } 
+  }
 
   setInterval(updateBackground, 1000 * 60);
   updateBackground();
-  </script>      
+  */
+</script>      
 </body>
