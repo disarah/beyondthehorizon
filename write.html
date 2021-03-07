@@ -18,6 +18,7 @@
   crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="scripts/index.js"></script>
+  <script src="scripts/scroll.js"></script>
 
   <!-- Material Kit CSS -->
   <link href="assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
@@ -120,18 +121,36 @@ body a.button:hover {
   display: flex;
   justify-content: right;
   align-items: center;
-  height: 40vh;
+  height: 10vh;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+textarea::placeholder {
   color: black;
-  opacity: 1; /* Firefox */
+  font-size: 2rem;
+  font-style: italic;
 }
+
+textarea {
+    position: relative;
+    padding: 10px;
+    display: block;
+  box-sizing: padding-box;
+  overflow: hidden;
+  width: 100%;
+  font-size: 2rem;
+  margin: 20px auto;
+  border-radius: 6px;
+  border: 0;
+}
+&:focus{
+    border: none;
+    outline: none;
+  }
 
 </style>
 </head>
 
-<body style = "background-color: #6d54a9" onload = "init();">      
+<body style = "background-color: #6d54a9">      
     <!-- NAVBAR -->
     </br>
     <div class="topnav" id="myTopnav">
@@ -144,9 +163,8 @@ body a.button:hover {
 </div>
 </br>
 <div class = "container">
-  </br>
   <form id="form" onsubmit="return false;">
-    <textarea style="position:relative; color: white; height:1em" class="form-control" type="text" id="userInput" placeholder="Got any thoughts? Jot them down!" rows="1"></textarea>
+    <textarea rows="3" data-min-rows='3' class="autoExpand" type="text" id="userInput" placeholder="Got any thoughts? Jot them down!" autofocus></textarea>
     <div class="input-group-append">
 <div class="center" style = "text-decoration: none;">
     <a href="new.html" class="button" style = "position:relative; padding: 2rem 2rem" type="submit" onclick="othername();">Save Draft</a>
@@ -174,41 +192,6 @@ function getInput(evt) {
 
 const $form = document.querySelector('.input-group.mb-3 form');
 $form.addEventListener('submit', getInput);
-
-
-var observe;
-if (window.attachEvent) {
-    observe = function (element, event, handler) {
-        element.attachEvent('on'+event, handler);
-    };
-}
-else {
-    observe = function (element, event, handler) {
-        element.addEventListener(event, handler, false);
-    };
-}
-function init () {
-    var text = document.getElementById('text');
-    function resize () {
-        text.style.height = 'auto';
-        text.style.height = text.scrollHeight+'px';
-    }
-    /* 0-timeout to get the already changed text */
-    function delayedResize () {
-        window.setTimeout(resize, 0);
-    }
-    observe(text, 'change',  resize);
-    observe(text, 'cut',     delayedResize);
-    observe(text, 'paste',   delayedResize);
-    observe(text, 'drop',    delayedResize);
-    observe(text, 'keydown', delayedResize);
-
-    text.focus();
-    text.select();
-    resize();
-}
-
-
 </script>
 </body>
 </html>
