@@ -118,32 +118,42 @@ body a.button:hover {
 
 .center {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   height: 40vh;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
 </style>
 </head>
 
-<body style = "background-color: #6d54a9">      
+<body style = "background-color: #6d54a9" onload = "init();">      
     <!-- NAVBAR -->
     </br>
     <div class="topnav" id="myTopnav">
       <a href="index.html">Home</a>
       <a href="letter.html">Shoebox</a>
-      <a href="write.html">+</a>
+      <a href="draft.html">Drafts</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <img src= "assets/img/logo.svg">
     </a>
 </div>
 </br>
 <div class = "container">
+  </br>
+  <form id="form" onsubmit="return false;">
+    <textarea style="position:relative; color: white; height:1em" class="form-control" type="text" id="userInput" placeholder="Got any thoughts? Jot them down!" rows="1"></textarea>
+    <div class="input-group-append">
 <div class="center" style = "text-decoration: none;">
-    <a href="new.html" class="button" style = "position:relative; padding: 2rem">Write a Letter</a>
+    <a href="new.html" class="button" style = "position:relative; padding: 2rem 2rem" type="submit" onclick="othername();">Save Draft</a>
+    <a href="letter.html" class="button" style = "position:relative; padding: 2rem 2rem" type="submit" onclick="othername();">Send</a>
 </div>
-<div class="center" style = "text-decoration: none;">
-    <a href="letter.html" class="button" style = "position:relative; padding: 2rem">Shoebox</a>
 </div>
+</form>
 </div>
 <script>
     function myFunction() {
@@ -154,6 +164,51 @@ body a.button:hover {
         x.className = "topnav";
     }
 }
+
+function getInput(evt) {
+    evt.preventDefault();
+    const $userInput = document.getElementById('userInput');
+    const userInput = $userInput.value;
+    console.log(userInput);
+}  
+
+const $form = document.querySelector('.input-group.mb-3 form');
+$form.addEventListener('submit', getInput);
+
+
+var observe;
+if (window.attachEvent) {
+    observe = function (element, event, handler) {
+        element.attachEvent('on'+event, handler);
+    };
+}
+else {
+    observe = function (element, event, handler) {
+        element.addEventListener(event, handler, false);
+    };
+}
+function init () {
+    var text = document.getElementById('text');
+    function resize () {
+        text.style.height = 'auto';
+        text.style.height = text.scrollHeight+'px';
+    }
+    /* 0-timeout to get the already changed text */
+    function delayedResize () {
+        window.setTimeout(resize, 0);
+    }
+    observe(text, 'change',  resize);
+    observe(text, 'cut',     delayedResize);
+    observe(text, 'paste',   delayedResize);
+    observe(text, 'drop',    delayedResize);
+    observe(text, 'keydown', delayedResize);
+
+    text.focus();
+    text.select();
+    resize();
+}
+
+
 </script>
 </body>
 </html>
