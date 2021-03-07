@@ -3,6 +3,7 @@ const message = document.getElementById('message');
 const smallMessage = document.getElementById('smallMessage');
 const emailMessage = 'Type your email';
 const passwordMessage = 'Choose your password';
+const name = document.getElementById('text');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const submitBtn = document.getElementById('submit');
@@ -42,12 +43,13 @@ function formValidation(){
 	//step 1 email
 	//display Type your email when user clicks on input and types, 
 	//hide after user clicks on something else
-	email.addEventListener("input",firstMessage);
+	//name.addEventListener("input",firstMessage);
+	//email.addEventListener("input", firstMessage);
 	//step 2 password 
 	//display Choose your password as user clicks on input
 	//change small message as user enters longer password 
-	password.addEventListener('input', secondMessage);
-	password.addEventListener('keyup', length);
+	//password.addEventListener('input', secondMessage);
+	//password.addEventListener('keyup', length);
 
 	//step 3 when input 1 and 2 are filled out 
 	//display message You're a click away, small message that is why you are here fore
